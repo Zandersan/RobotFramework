@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221213 10:36:14.166" rpa="false" schemaversion="3">
+<suite id="s1" name="Gerenciadorassunto" source="d:\Testes\Automatizados\Portal PMC\Gerenciador\tests\gerenciadorassunto.robot">
+<test id="s1-t1" name="Validação de regras de consulta, cadastro e edição de Assunto" line="5">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20221213 10:36:14.828" endtime="20221213 10:36:14.828"/>
+</kw>
+<kw name="Fazer login no Gerenciador PMC" library="gerenciadorAssunto-page-object">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/inicio/login</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221213 10:36:14.830" level="INFO">Opening browser 'firefox' to base url 'https://dev-gerenciador.curitiba.pr.gov.br/inicio/login'.</msg>
+<msg timestamp="20221213 10:36:14.837" level="INFO">Firefox driver log is always forced to to: D:\Testes\Automatizados\Portal PMC\Gerenciador\geckodriver-3.log</msg>
+<status status="PASS" starttime="20221213 10:36:14.829" endtime="20221213 10:36:20.564"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221213 10:36:20.564" endtime="20221213 10:36:21.034"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login - Portal PMC</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20221213 10:36:21.240" level="INFO">Page title is 'Login - Portal PMC'.</msg>
+<status status="PASS" starttime="20221213 10:36:21.035" endtime="20221213 10:36:21.240"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<arg>alexrocha</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:21.241" level="INFO">Typing text 'alexrocha' into text field 'id=Usuario'.</msg>
+<status status="PASS" starttime="20221213 10:36:21.240" endtime="20221213 10:36:21.881"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>\#.senhasenha</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:21.881" level="INFO">Typing password into text field 'id=Senha'.</msg>
+<msg timestamp="20221213 10:36:22.301" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221213 10:36:22.523" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221213 10:36:21.881" endtime="20221213 10:36:22.523"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:22.524" level="INFO">Clicking element 'id=loginEntrar'.</msg>
+<status status="PASS" starttime="20221213 10:36:22.524" endtime="20221213 10:36:28.162"/>
+</kw>
+<status status="PASS" starttime="20221213 10:36:14.829" endtime="20221213 10:36:28.162"/>
+</kw>
+<kw name="Verificar funcionalidades da tela Cadastro de Assunto" library="gerenciadorAssunto-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/assunto/inserir</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221213 10:36:28.164" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/assunto/inserir'</msg>
+<status status="PASS" starttime="20221213 10:36:28.164" endtime="20221213 10:36:29.692"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SALVAR_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:29.692" level="INFO">Clicking element 'xpath://*[@id="formulario"]/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20221213 10:36:29.692" endtime="20221213 10:36:30.321"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${ELEMENT_OBRIGATORIO}</arg>
+<arg>O campo Nome é obrigatório.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20221213 10:36:30.321" level="INFO">Verifying element 'xpath://*[@id="Nome-error"]' contains exact text 'O campo Nome é obrigatório.'.</msg>
+<status status="PASS" starttime="20221213 10:36:30.321" endtime="20221213 10:36:30.745"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20221213 10:36:30.745" level="INFO">${word} = drive</msg>
+<status status="PASS" starttime="20221213 10:36:30.745" endtime="20221213 10:36:30.746"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CADASTRO}</arg>
+<arg>Teste ${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:30.746" level="INFO">Typing text 'Teste drive' into text field 'xpath://*[@id="Nome"]'.</msg>
+<status status="PASS" starttime="20221213 10:36:30.746" endtime="20221213 10:36:31.406"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SALVAR_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:31.407" level="INFO">Clicking element 'xpath://*[@id="formulario"]/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20221213 10:36:31.406" endtime="20221213 10:36:33.477"/>
+</kw>
+<status status="PASS" starttime="20221213 10:36:28.163" endtime="20221213 10:36:33.478"/>
+</kw>
+<kw name="Verificar funcionalidades da tela Consulta de Assunto" library="gerenciadorAssunto-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/Assunto/Listar</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221213 10:36:33.479" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/Assunto/Listar'</msg>
+<status status="PASS" starttime="20221213 10:36:33.479" endtime="20221213 10:36:33.919"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CONSULTA}</arg>
+<arg>Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:33.919" level="INFO">Typing text 'Teste' into text field 'xpath://*[@id="Nome"]'.</msg>
+<status status="PASS" starttime="20221213 10:36:33.919" endtime="20221213 10:36:34.553"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_FILTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:34.554" level="INFO">Clicking element 'xpath://*[@id="btnFiltrar"]'.</msg>
+<status status="PASS" starttime="20221213 10:36:34.553" endtime="20221213 10:36:35.152"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ELEMENT_NOME_FILTRO}</arg>
+<arg>Teste</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221213 10:36:35.577" level="INFO">Element 'xpath://*[@id="abrir2"]/div/div/div/div/table/tbody/tr[1]/td[1]' contains text 'Teste'.</msg>
+<status status="PASS" starttime="20221213 10:36:35.152" endtime="20221213 10:36:35.577"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_LIMPAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:35.578" level="INFO">Clicking element 'xpath://*[@id="btnLimpar"]'.</msg>
+<status status="PASS" starttime="20221213 10:36:35.577" endtime="20221213 10:36:36.220"/>
+</kw>
+<kw name="Element Should Not Contain" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CONSULTA}</arg>
+<arg>Teste</arg>
+<doc>Verifies that element ``locator`` does not contain text ``expected``.</doc>
+<msg timestamp="20221213 10:36:36.656" level="INFO">Element 'xpath://*[@id="Nome"]' does not contain text 'Teste'.</msg>
+<status status="PASS" starttime="20221213 10:36:36.220" endtime="20221213 10:36:36.656"/>
+</kw>
+<status status="PASS" starttime="20221213 10:36:33.478" endtime="20221213 10:36:36.657"/>
+</kw>
+<kw name="Verificar funcionalidades da tela Edição de Assunto" library="gerenciadorAssunto-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/Assunto/Listar</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221213 10:36:36.658" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/Assunto/Listar'</msg>
+<status status="PASS" starttime="20221213 10:36:36.658" endtime="20221213 10:36:37.004"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CONSULTA}</arg>
+<arg>Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:37.005" level="INFO">Typing text 'Teste' into text field 'xpath://*[@id="Nome"]'.</msg>
+<status status="PASS" starttime="20221213 10:36:37.004" endtime="20221213 10:36:37.636"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_FILTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:37.637" level="INFO">Clicking element 'xpath://*[@id="btnFiltrar"]'.</msg>
+<status status="PASS" starttime="20221213 10:36:37.636" endtime="20221213 10:36:38.192"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_EDITAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:38.193" level="INFO">Clicking element 'xpath://*[@id="abrir2"]/div/div/div/div/table/tbody/tr[1]/td[2]/a'.</msg>
+<status status="PASS" starttime="20221213 10:36:38.192" endtime="20221213 10:36:39.028"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word2}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20221213 10:36:39.029" level="INFO">${word2} = rich</msg>
+<status status="PASS" starttime="20221213 10:36:39.028" endtime="20221213 10:36:39.029"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CADASTRO}</arg>
+<arg>Teste ${word2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:39.030" level="INFO">Typing text 'Teste rich' into text field 'xpath://*[@id="Nome"]'.</msg>
+<status status="PASS" starttime="20221213 10:36:39.029" endtime="20221213 10:36:39.684"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_SALVAR_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221213 10:36:39.685" level="INFO">Clicking element 'xpath://*[@id="formulario"]/div[3]/div/button'.</msg>
+<status status="PASS" starttime="20221213 10:36:39.684" endtime="20221213 10:36:40.370"/>
+</kw>
+<status status="PASS" starttime="20221213 10:36:36.657" endtime="20221213 10:36:40.370"/>
+</kw>
+<kw name="Fechar Navegador" library="gerenciadorAssunto-page-object">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221213 10:36:40.371" endtime="20221213 10:36:41.098"/>
+</kw>
+<status status="PASS" starttime="20221213 10:36:40.371" endtime="20221213 10:36:41.099"/>
+</kw>
+<status status="PASS" starttime="20221213 10:36:14.827" endtime="20221213 10:36:41.099"/>
+</test>
+<status status="PASS" starttime="20221213 10:36:14.170" endtime="20221213 10:36:41.100"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Gerenciadorassunto">Gerenciadorassunto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

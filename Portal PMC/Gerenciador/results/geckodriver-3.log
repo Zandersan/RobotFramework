@@ -1,0 +1,15 @@
+1674477713992	geckodriver	INFO	Listening on 127.0.0.1:52513
+1674477717036	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "52514" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alero\\AppData\\Local\\Temp\\rust_mozprofileCMUhvG"
+1674477717300	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1674477717303	Marionette	INFO	Listening on port 52521
+Read port: 52521
+WebDriver BiDi listening on ws://127.0.0.1:52514
+1674477717434	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alero\\AppData\\Local\\Temp\\rust_mozprofileCMUhvG\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:52514/devtools/browser/c65b7ad0-cc90-4669-a125-7951717f7cdd
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://dev-gerenciador.curitiba.pr.gov.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://dev-gerenciador.curitiba.pr.gov.br."
+1674478259992	Marionette	INFO	Stopped listening on port 52521
+Dynamically enable window occlusion 1
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230301 13:31:19.129" rpa="false" schemaversion="3">
+<suite id="s1" name="aberturaT2Medico" source="D:\Testes\Automatizados\Prontuario\tests\aberturaT2Medico.robot">
+<test id="s1-t1" name="Realizar abertura de atendimento tipo &quot;T2 Médico&quot; e validar regras do sistema" line="5">
+<kw name="Fazer login no GpWeb" library="aberturaAtendimento-T2Medico-page-object">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://hom-gpweb-v2.curitiba.pr.gov.br/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230301 13:31:19.719" level="INFO">Opening browser 'chrome' to base url 'http://hom-gpweb-v2.curitiba.pr.gov.br/login'.</msg>
+<status status="PASS" starttime="20230301 13:31:19.719" endtime="20230301 13:31:20.890"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230301 13:31:20.890" endtime="20230301 13:31:21.002"/>
+</kw>
+<kw name="Wait For Condition" library="SeleniumLibrary">
+<arg>return document.title == "Login - Gestão de Pessoal Web"</arg>
+<doc>Waits until ``condition`` is true or ``timeout`` expires.</doc>
+<status status="PASS" starttime="20230301 13:31:21.002" endtime="20230301 13:31:21.005"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login - Gestão de Pessoal Web</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230301 13:31:21.008" level="INFO">Page title is 'Login - Gestão de Pessoal Web'.</msg>
+<status status="PASS" starttime="20230301 13:31:21.006" endtime="20230301 13:31:21.008"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<arg>alexrocha</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230301 13:31:21.008" level="INFO">Typing text 'alexrocha' into text field 'xpath://*[@id="Usuario"]'.</msg>
+<status status="PASS" starttime="20230301 13:31:21.008" endtime="20230301 13:31:21.051"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>\#.senhasenha</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230301 13:31:21.052" level="INFO">Typing password into text field 'xpath://*[@id="Senha"]'.</msg>
+<msg timestamp="20230301 13:31:21.076" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230301 13:31:21.103" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230301 13:31:21.051" endtime="20230301 13:31:21.103"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230301 13:31:21.103" level="INFO">Clicking element 'xpath://*[@id="loginForm"]/div/div/button[1]'.</msg>
+<status status="PASS" starttime="20230301 13:31:21.103" endtime="20230301 13:31:21.129"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230301 13:31:24.141" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230301 13:31:21.129" endtime="20230301 13:31:24.141"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Element_Confirmar_Login}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230301 13:31:24.157" level="INFO">Element 'id=Entrar' is displayed.</msg>
+<status status="PASS" starttime="20230301 13:31:24.141" endtime="20230301 13:31:24.158"/>
+</kw>
+<msg timestamp="20230301 13:31:24.158" level="INFO">${Element_Confirmar_Login} = True</msg>
+<status status="PASS" starttime="20230301 13:31:24.141" endtime="20230301 13:31:24.158"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Element_Confirmar_Login}</arg>
+<arg>Click Element</arg>
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230301 13:31:24.158" level="INFO">Clicking element 'id=Entrar'.</msg>
+<status status="PASS" starttime="20230301 13:31:24.158" endtime="20230301 13:31:31.217"/>
+</kw>
+<status status="PASS" starttime="20230301 13:31:24.158" endtime="20230301 13:31:31.217"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>15</arg>
+<arg>10</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="aberturaAtendimento-T2Medico-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Página Inicial - Gestão de Pessoal Web</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230301 13:31:31.222" level="INFO">Page title is 'Página Inicial - Gestão de Pessoal Web'.</msg>
+<status status="PASS" starttime="20230301 13:31:31.217" endtime="20230301 13:31:31.222"/>
+</kw>
+<status status="PASS" starttime="20230301 13:31:31.217" endtime="20230301 13:31:31.222"/>
+</kw>
+<status status="PASS" starttime="20230301 13:31:31.217" endtime="20230301 13:31:31.222"/>
+</kw>
+<status status="PASS" starttime="20230301 13:31:19.718" endtime="20230301 13:31:31.222"/>
+</kw>
+<kw name="Realizar abertura de atendimento tipo &quot;T2 Médico&quot;" library="aberturaAtendimento-T2Medico-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://hom-gpweb-v2.curitiba.pr.gov.br/aberturaatendimento/inserir</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230301 13:31:31.223" level="INFO">Opening url 'http://hom-gpweb-v2.curitiba.pr.gov.br/aberturaatendimento/inserir'</msg>
+<status status="PASS" starttime="20230301 13:31:31.223" endtime="20230301 13:31:34.975"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>15</arg>
+<arg>10</arg>
+<arg>Aguardar carregamento de cadastro</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento de cadastro" library="aberturaAtendimento-T2Medico-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Abertura de Atendimento - Gestão de Pessoal Web</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230301 13:31:34.986" level="INFO">Page title is 'Abertura de Atendimento - Gestão de Pessoal Web'.</msg>
+<status status="PASS" starttime="20230301 13:31:34.975" endtime="20230301 13:31:34.986"/>
+</kw>
+<status status="PASS" starttime="20230301 13:31:34.975" endtime="20230301 13:31:34.986"/>
+</kw>
+<status status="PASS" starttime="20230301 13:31:34.975" endtime="20230301 13:31:34.986"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${LIST_ENTIDADE}</arg>
+<arg>PMC</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20230301 13:31:34.986" endtime="20230301 13:31:35.008"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${LIST_ENTIDADE}</arg>
+<arg>00</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230301 13:31:35.009" level="INFO">Selecting options from selection list 'id=IdEntidade' by value 00.</msg>
+<status status="PASS" starttime="20230301 13:31:35.009" endtime="20230301 13:31:35.054"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_MATRICULA}</arg>
+<arg>135309</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230301 13:31:35.055" level="INFO">Typing text '135309' into text field 'xpath://*[@id="MatriculaServidor"]'.</msg>
+<status status="PASS" starttime="20230301 13:31:35.054" endtime="20230301 13:31:35.134"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_BUSCAR_MATRICULA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230301 13:31:35.134" level="INFO">Clicking element 'xpath://*[@id="btnBuscarMatriculaObterS"]'.</msg>
+<status status="PASS" starttime="20230301 13:31:35.134" endtime="20230301 13:31:35.167"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${INPUT_NOME_MATRICULA}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230301 13:31:35.167" endtime="20230301 13:31:35.186"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${LIST_TIPO_ATENDIMENTO}</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230301 13:31:35.186" level="INFO">Selecting options from selection list 'xpath://*[@id="TipoAtendimento"]' by value 2.</msg>
+<status status="PASS" starttime="20230301 13:31:35.186" endtime="20230301 13:31:35.227"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>${LIST_TIPO_ATENDIMENTO}</arg>
+<arg>T2 MÉDICO</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20230301 13:31:35.227" level="INFO">Verifying list 'xpath://*[@id="TipoAtendimento"]' has option [ T2 MÉDICO ] selected.</msg>
+<msg timestamp="20230301 13:31:35.241" level="INFO">Current page contains list 'xpath://*[@id="TipoAtendimento"]'.</msg>
+<msg timestamp="20230301 13:31:35.408" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230301 13:31:35.409" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.178)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00456643]
+	(No symbol) [0x003EBE21]
+	(No symbol) [0x002EDA9D]
+	(No symbol) [0x002F09E4]
+	(No symbol) [0x002F08AD]
+	(No symbol) [0x002F0B30]
+	(No symbol) [0x0031CC30]
+	(No symbol) [0x0033FD7C]
+	(No symbol) [0x0031641F]
+	(No symbol) [0x003400D4]
+	(No symbol) [0x00356B09]
+	(No symbol) [0x0033FB76]
+	(No symbol) [0x003149C1]
+	(No symbol) [0x00315E5D]
+	GetHandleVerifier [0x006CA142+2497106]
+	GetHandleVerifier [0x006F85D3+2686691]
+	GetHandleVerifier [0x006FBB9C+2700460]
+	GetHandleVerifier [0x00503B10+635936]
+	(No symbol) [0x003F4A1F]
+	(No symbol) [0x003FA418]
+	(No symbol) [0x003FA505]
+	(No symbol) [0x0040508B]
+	BaseThreadInitThunk [0x76C600F9+25]
+	RtlGetAppContainerNamedObjectPath [0x76EC7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x76EC7B8E+238]
+</msg>
+<status status="FAIL" starttime="20230301 13:31:35.227" endtime="20230301 13:31:35.432"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_INICIAR_ATENDIMENTO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230301 13:31:35.432" endtime="20230301 13:31:35.432"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${UPLOAD_ANEXO}</arg>
+<arg>D:\\Testes\\Portal PMC\\REQ001 - Controle de acesso.pdf</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="NOT RUN" starttime="20230301 13:31:35.432" endtime="20230301 13:31:35.432"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_CONFIRMACAO_UPLOAD}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230301 13:31:35.433" endtime="20230301 13:31:35.433"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ANEXAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230301 13:31:35.433" endtime="20230301 13:31:35.433"/>
+</kw>
+<status status="FAIL" starttime="20230301 13:31:31.223" endtime="20230301 13:31:35.433"/>
+</kw>
+<kw name="Verificar Regra 4.1" library="aberturaAtendimento-T2Medico-page-object">
+<status status="NOT RUN" starttime="20230301 13:31:35.433" endtime="20230301 13:31:35.433"/>
+</kw>
+<kw name="Finalizar Cadastro" library="aberturaAtendimento-T2Medico-page-object">
+<status status="NOT RUN" starttime="20230301 13:31:35.434" endtime="20230301 13:31:35.434"/>
+</kw>
+<kw name="Fechar Navegador" library="aberturaAtendimento-T2Medico-page-object">
+<status status="NOT RUN" starttime="20230301 13:31:35.434" endtime="20230301 13:31:35.434"/>
+</kw>
+<status status="FAIL" starttime="20230301 13:31:19.717" endtime="20230301 13:31:35.435">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=110.0.5481.178)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x00456643]
+	(No symbol) [0x003EBE21]
+	(No symbol) [0x002EDA9D]
+	(No symbol) [0x002F09E4]
+	(No symbol) [0x002F08AD]
+	(No symbol) [0x002F0B30]
+	(No symbol) [0x0031CC30]
+	(No symbol) [0x0033FD7C]
+	(No symbol) [0x0031641F]
+	(No symbol) [0x003400D4]
+	(No symbol) [0x00356B09]
+	(No symbol) [0x0033FB76]
+	(No symbol) [0x003149C1]
+	(No symbol) [0x00315E5D]
+	GetHandleVerifier [0x006CA142+2497106]
+	GetHandleVerifier [0x006F85D3+2686691]
+	GetHandleVerifier [0x006FBB9C+2700460]
+	GetHandleVerifier [0x00503B10+635936]
+	(No symbol) [0x003F4A1F]
+	(No symbol) [0x003FA418]
+	(No symbol) [0x003FA505]
+	(No symbol) [0x0040508B]
+	BaseThreadInitThunk [0x76C600F9+25]
+	RtlGetAppContainerNamedObjectPath [0x76EC7BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x76EC7B8E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20230301 13:31:19.130" endtime="20230301 13:31:35.438"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="aberturaT2Medico">aberturaT2Medico</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

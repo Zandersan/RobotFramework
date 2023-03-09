@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230214 14:56:09.957" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\alero\.vscode\extensions\robocorp.robotframework-lsp-1.9.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Open Browser">
+<arg>https://dev-adm-permissionario.curitiba.pr.gov.br/</arg>
+<arg>chrome</arg>
+<msg timestamp="20230214 14:56:10.616" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<status status="FAIL" starttime="20230214 14:56:10.616" endtime="20230214 14:56:10.616"/>
+</kw>
+<kw name="Maximize Browser Window">
+<status status="NOT RUN" starttime="20230214 14:56:10.618" endtime="20230214 14:56:10.618"/>
+</kw>
+<kw name="Title Should Be">
+<arg>Página Inicial - Permissionários</arg>
+<status status="NOT RUN" starttime="20230214 14:56:10.619" endtime="20230214 14:56:10.619"/>
+</kw>
+<kw name="Input Text">
+<arg>${INPUT_USUARIO}</arg>
+<arg>alexrocha</arg>
+<status status="NOT RUN" starttime="20230214 14:56:10.620" endtime="20230214 14:56:10.620"/>
+</kw>
+<kw name="Input Password">
+<arg>${INPUT_SENHA}</arg>
+<arg>\#.senhasenha</arg>
+<status status="NOT RUN" starttime="20230214 14:56:10.621" endtime="20230214 14:56:10.621"/>
+</kw>
+<kw name="Click Element">
+<arg>${BUTTON_ENTRAR}</arg>
+<status status="NOT RUN" starttime="20230214 14:56:10.623" endtime="20230214 14:56:10.623"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230214 14:56:10.623" endtime="20230214 14:56:10.623"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${Element_Confirmar_Login}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20230214 14:56:10.623" endtime="20230214 14:56:10.623"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${Element_Confirmar_Login}</arg>
+<arg>Click Element</arg>
+<arg>${BUTTON_CONFIRMAR}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20230214 14:56:10.623" endtime="20230214 14:56:10.623"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>15</arg>
+<arg>10</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="NOT RUN" starttime="20230214 14:56:10.624" endtime="20230214 14:56:10.624"/>
+</kw>
+<status status="PASS" starttime="20230214 14:56:09.979" endtime="20230214 14:56:13.171"/>
+</kw>
+<status status="PASS" starttime="20230214 14:56:09.979" endtime="20230214 14:56:13.171"/>
+</test>
+<status status="PASS" starttime="20230214 14:56:09.959" endtime="20230214 14:56:13.172"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

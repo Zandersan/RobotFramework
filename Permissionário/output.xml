@@ -1,0 +1,2207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230308 08:59:39.264" rpa="false" schemaversion="3">
+<suite id="s1" name="Responderformulario92" source="d:\Testes\Automatizados\Permissionário\tests\responderformulario92.robot">
+<test id="s1-t1" name="Responder formulario 88" line="5">
+<kw name="Fazer login no ADM Permissionários" library="responderFormulario92-page-object">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/login-off/01019120991</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230308 08:59:39.872" level="INFO">Opening browser 'chrome' to base url 'https://dev-portalpermissionario.curitiba.pr.gov.br/login-off/01019120991'.</msg>
+<status status="PASS" starttime="20230308 08:59:39.872" endtime="20230308 08:59:41.579"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230308 08:59:41.579" endtime="20230308 08:59:41.701"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:39.872" endtime="20230308 08:59:41.701"/>
+</kw>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 08:59:41.702" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 08:59:41.702" endtime="20230308 08:59:41.831"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 08:59:41.831" level="INFO">${word} = ago</msg>
+<status status="PASS" starttime="20230308 08:59:41.831" endtime="20230308 08:59:41.831"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 08:59:41.832" level="INFO">${numbers} = [5, 6, 8, 1]</msg>
+<status status="PASS" starttime="20230308 08:59:41.831" endtime="20230308 08:59:41.832"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 08:59:41.832" endtime="20230308 08:59:41.854"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:41.854" level="INFO">Typing text 'ago' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:41.854" endtime="20230308 08:59:41.906"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:41.907" level="INFO">Typing text 'ago' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:41.907" endtime="20230308 08:59:41.960"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:41.960" level="INFO">Typing text 'ago' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:41.960" endtime="20230308 08:59:42.019"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.020" level="INFO">Typing text 'ago' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.019" endtime="20230308 08:59:42.073"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.074" level="INFO">Typing text '[5, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.073" endtime="20230308 08:59:42.129"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.130" level="INFO">Typing text '[5, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.129" endtime="20230308 08:59:42.186"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.187" level="INFO">Typing text '[5, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.186" endtime="20230308 08:59:42.241"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.242" level="INFO">Typing text '[5, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.241" endtime="20230308 08:59:42.301"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.301" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.301" endtime="20230308 08:59:42.335"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.336" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.336" endtime="20230308 08:59:42.370"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.370" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.370" endtime="20230308 08:59:42.399"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:42.400" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:42.400" endtime="20230308 08:59:42.427"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:42.565" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-108.png"&gt;&lt;img src="selenium-screenshot-108.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 08:59:42.566" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 08:59:42.428" endtime="20230308 08:59:42.567"/>
+</kw>
+<status status="FAIL" starttime="20230308 08:59:42.427" endtime="20230308 08:59:42.567"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:44.581" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 08:59:44.575" endtime="20230308 08:59:44.582"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:44.574" endtime="20230308 08:59:44.582"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:42.427" endtime="20230308 08:59:44.582"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:41.702" endtime="20230308 08:59:44.582"/>
+</kw>
+<kw name="Repeat Keyword" library="BuiltIn">
+<arg>15</arg>
+<arg>Registrar respostas do formulario 88</arg>
+<doc>Executes the specified keyword multiple times.</doc>
+<msg timestamp="20230308 08:59:44.584" level="INFO">Repeating keyword, round 1/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 08:59:44.586" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 08:59:44.585" endtime="20230308 08:59:44.679"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 08:59:44.679" level="INFO">${word} = price</msg>
+<status status="PASS" starttime="20230308 08:59:44.679" endtime="20230308 08:59:44.679"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 08:59:44.680" level="INFO">${numbers} = [1, 2, 8, 5]</msg>
+<status status="PASS" starttime="20230308 08:59:44.680" endtime="20230308 08:59:44.680"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 08:59:44.680" endtime="20230308 08:59:44.705"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:44.706" level="INFO">Typing text 'price' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:44.705" endtime="20230308 08:59:44.762"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:44.763" level="INFO">Typing text 'price' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:44.763" endtime="20230308 08:59:44.828"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:44.829" level="INFO">Typing text 'price' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:44.828" endtime="20230308 08:59:44.887"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:44.888" level="INFO">Typing text 'price' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:44.888" endtime="20230308 08:59:44.942"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:44.943" level="INFO">Typing text '[1, 2, 8, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:44.943" endtime="20230308 08:59:45.006"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:45.007" level="INFO">Typing text '[1, 2, 8, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:45.006" endtime="20230308 08:59:45.076"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:45.077" level="INFO">Typing text '[1, 2, 8, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:45.076" endtime="20230308 08:59:45.135"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:45.135" level="INFO">Typing text '[1, 2, 8, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:45.135" endtime="20230308 08:59:45.197"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:45.198" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:45.198" endtime="20230308 08:59:45.242"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:45.243" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:45.243" endtime="20230308 08:59:45.293"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:45.294" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:45.294" endtime="20230308 08:59:45.338"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:45.339" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:45.338" endtime="20230308 08:59:45.382"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:45.525" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-109.png"&gt;&lt;img src="selenium-screenshot-109.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 08:59:45.525" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 08:59:45.384" endtime="20230308 08:59:45.526"/>
+</kw>
+<status status="FAIL" starttime="20230308 08:59:45.383" endtime="20230308 08:59:45.527"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:47.535" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.531" endtime="20230308 08:59:47.535"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:47.531" endtime="20230308 08:59:47.536"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:45.383" endtime="20230308 08:59:47.536"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:44.585" endtime="20230308 08:59:47.536"/>
+</kw>
+<msg timestamp="20230308 08:59:47.536" level="INFO">Repeating keyword, round 2/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 08:59:47.537" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 08:59:47.537" endtime="20230308 08:59:47.624"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 08:59:47.624" level="INFO">${word} = past</msg>
+<status status="PASS" starttime="20230308 08:59:47.624" endtime="20230308 08:59:47.625"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 08:59:47.625" level="INFO">${numbers} = [4, 6, 5, 3]</msg>
+<status status="PASS" starttime="20230308 08:59:47.625" endtime="20230308 08:59:47.625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 08:59:47.625" endtime="20230308 08:59:47.641"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:47.642" level="INFO">Typing text 'past' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.641" endtime="20230308 08:59:47.696"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:47.697" level="INFO">Typing text 'past' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.696" endtime="20230308 08:59:47.750"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:47.751" level="INFO">Typing text 'past' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.751" endtime="20230308 08:59:47.804"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:47.805" level="INFO">Typing text 'past' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.804" endtime="20230308 08:59:47.858"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:47.859" level="INFO">Typing text '[4, 6, 5, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.859" endtime="20230308 08:59:47.913"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:47.914" level="INFO">Typing text '[4, 6, 5, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.914" endtime="20230308 08:59:47.972"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:47.973" level="INFO">Typing text '[4, 6, 5, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:47.973" endtime="20230308 08:59:48.028"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:48.029" level="INFO">Typing text '[4, 6, 5, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:48.028" endtime="20230308 08:59:48.083"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:48.083" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:48.083" endtime="20230308 08:59:48.114"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:48.115" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:48.114" endtime="20230308 08:59:48.149"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:48.150" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:48.149" endtime="20230308 08:59:48.180"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:48.181" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:48.181" endtime="20230308 08:59:48.207"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:48.354" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-110.png"&gt;&lt;img src="selenium-screenshot-110.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 08:59:48.354" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 08:59:48.208" endtime="20230308 08:59:48.354"/>
+</kw>
+<status status="FAIL" starttime="20230308 08:59:48.208" endtime="20230308 08:59:48.355"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:50.364" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.361" endtime="20230308 08:59:50.364"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:50.361" endtime="20230308 08:59:50.364"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:48.208" endtime="20230308 08:59:50.365"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:47.536" endtime="20230308 08:59:50.365"/>
+</kw>
+<msg timestamp="20230308 08:59:50.365" level="INFO">Repeating keyword, round 3/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 08:59:50.365" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 08:59:50.365" endtime="20230308 08:59:50.440"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 08:59:50.441" level="INFO">${word} = whom</msg>
+<status status="PASS" starttime="20230308 08:59:50.440" endtime="20230308 08:59:50.441"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 08:59:50.441" level="INFO">${numbers} = [8, 6, 3, 2]</msg>
+<status status="PASS" starttime="20230308 08:59:50.441" endtime="20230308 08:59:50.441"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 08:59:50.441" endtime="20230308 08:59:50.456"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.457" level="INFO">Typing text 'whom' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.456" endtime="20230308 08:59:50.525"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.526" level="INFO">Typing text 'whom' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.526" endtime="20230308 08:59:50.575"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.576" level="INFO">Typing text 'whom' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.575" endtime="20230308 08:59:50.626"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.627" level="INFO">Typing text 'whom' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.627" endtime="20230308 08:59:50.679"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.680" level="INFO">Typing text '[8, 6, 3, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.679" endtime="20230308 08:59:50.737"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.738" level="INFO">Typing text '[8, 6, 3, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.737" endtime="20230308 08:59:50.791"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.791" level="INFO">Typing text '[8, 6, 3, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.791" endtime="20230308 08:59:50.847"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.847" level="INFO">Typing text '[8, 6, 3, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.847" endtime="20230308 08:59:50.907"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.907" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.907" endtime="20230308 08:59:50.938"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.938" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.938" endtime="20230308 08:59:50.969"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:50.970" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.970" endtime="20230308 08:59:50.999"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:51.000" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:50.999" endtime="20230308 08:59:51.025"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:51.179" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-111.png"&gt;&lt;img src="selenium-screenshot-111.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 08:59:51.180" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 08:59:51.026" endtime="20230308 08:59:51.180"/>
+</kw>
+<status status="FAIL" starttime="20230308 08:59:51.026" endtime="20230308 08:59:51.181"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:53.189" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.186" endtime="20230308 08:59:53.189"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:53.186" endtime="20230308 08:59:53.189"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:51.026" endtime="20230308 08:59:53.189"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:50.365" endtime="20230308 08:59:53.190"/>
+</kw>
+<msg timestamp="20230308 08:59:53.190" level="INFO">Repeating keyword, round 4/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 08:59:53.190" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 08:59:53.190" endtime="20230308 08:59:53.294"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 08:59:53.294" level="INFO">${word} = line</msg>
+<status status="PASS" starttime="20230308 08:59:53.294" endtime="20230308 08:59:53.294"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 08:59:53.295" level="INFO">${numbers} = [4, 1, 6, 2]</msg>
+<status status="PASS" starttime="20230308 08:59:53.294" endtime="20230308 08:59:53.295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 08:59:53.295" endtime="20230308 08:59:53.311"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.311" level="INFO">Typing text 'line' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.311" endtime="20230308 08:59:53.361"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.361" level="INFO">Typing text 'line' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.361" endtime="20230308 08:59:53.412"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.412" level="INFO">Typing text 'line' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.412" endtime="20230308 08:59:53.461"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.462" level="INFO">Typing text 'line' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.462" endtime="20230308 08:59:53.512"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.513" level="INFO">Typing text '[4, 1, 6, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.512" endtime="20230308 08:59:53.566"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.567" level="INFO">Typing text '[4, 1, 6, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.566" endtime="20230308 08:59:53.632"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.633" level="INFO">Typing text '[4, 1, 6, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.632" endtime="20230308 08:59:53.689"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.690" level="INFO">Typing text '[4, 1, 6, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.689" endtime="20230308 08:59:53.751"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.751" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.751" endtime="20230308 08:59:53.787"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.788" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.788" endtime="20230308 08:59:53.824"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.825" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.824" endtime="20230308 08:59:53.853"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:53.853" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:53.853" endtime="20230308 08:59:53.878"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:54.014" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-112.png"&gt;&lt;img src="selenium-screenshot-112.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 08:59:54.015" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 08:59:53.879" endtime="20230308 08:59:54.015"/>
+</kw>
+<status status="FAIL" starttime="20230308 08:59:53.879" endtime="20230308 08:59:54.016"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:56.031" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.027" endtime="20230308 08:59:56.031"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:56.027" endtime="20230308 08:59:56.031"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:53.878" endtime="20230308 08:59:56.031"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:53.190" endtime="20230308 08:59:56.031"/>
+</kw>
+<msg timestamp="20230308 08:59:56.032" level="INFO">Repeating keyword, round 5/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 08:59:56.032" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 08:59:56.032" endtime="20230308 08:59:56.127"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 08:59:56.128" level="INFO">${word} = man</msg>
+<status status="PASS" starttime="20230308 08:59:56.127" endtime="20230308 08:59:56.128"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 08:59:56.129" level="INFO">${numbers} = [3, 6, 8, 1]</msg>
+<status status="PASS" starttime="20230308 08:59:56.129" endtime="20230308 08:59:56.129"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 08:59:56.129" endtime="20230308 08:59:56.143"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.144" level="INFO">Typing text 'man' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.143" endtime="20230308 08:59:56.193"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.194" level="INFO">Typing text 'man' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.194" endtime="20230308 08:59:56.244"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.245" level="INFO">Typing text 'man' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.245" endtime="20230308 08:59:56.296"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.297" level="INFO">Typing text 'man' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.297" endtime="20230308 08:59:56.357"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.358" level="INFO">Typing text '[3, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.357" endtime="20230308 08:59:56.428"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.429" level="INFO">Typing text '[3, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.428" endtime="20230308 08:59:56.489"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.490" level="INFO">Typing text '[3, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.489" endtime="20230308 08:59:56.546"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.547" level="INFO">Typing text '[3, 6, 8, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.546" endtime="20230308 08:59:56.603"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.603" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.603" endtime="20230308 08:59:56.637"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.638" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.638" endtime="20230308 08:59:56.673"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.673" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.673" endtime="20230308 08:59:56.701"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:56.702" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:56.702" endtime="20230308 08:59:56.739"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:56.882" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-113.png"&gt;&lt;img src="selenium-screenshot-113.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 08:59:56.882" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 08:59:56.740" endtime="20230308 08:59:56.883"/>
+</kw>
+<status status="FAIL" starttime="20230308 08:59:56.739" endtime="20230308 08:59:56.883"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:58.898" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 08:59:58.895" endtime="20230308 08:59:58.899"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:58.895" endtime="20230308 08:59:58.899"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:56.739" endtime="20230308 08:59:58.899"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:56.032" endtime="20230308 08:59:58.899"/>
+</kw>
+<msg timestamp="20230308 08:59:58.899" level="INFO">Repeating keyword, round 6/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 08:59:58.900" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 08:59:58.900" endtime="20230308 08:59:58.973"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 08:59:58.974" level="INFO">${word} = day</msg>
+<status status="PASS" starttime="20230308 08:59:58.974" endtime="20230308 08:59:58.974"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 08:59:58.974" level="INFO">${numbers} = [7, 1, 4, 5]</msg>
+<status status="PASS" starttime="20230308 08:59:58.974" endtime="20230308 08:59:58.975"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 08:59:58.975" endtime="20230308 08:59:58.989"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:58.990" level="INFO">Typing text 'day' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:58.989" endtime="20230308 08:59:59.040"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.041" level="INFO">Typing text 'day' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.040" endtime="20230308 08:59:59.090"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.090" level="INFO">Typing text 'day' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.090" endtime="20230308 08:59:59.140"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.141" level="INFO">Typing text 'day' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.140" endtime="20230308 08:59:59.191"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.192" level="INFO">Typing text '[7, 1, 4, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.191" endtime="20230308 08:59:59.243"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.244" level="INFO">Typing text '[7, 1, 4, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.243" endtime="20230308 08:59:59.297"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.298" level="INFO">Typing text '[7, 1, 4, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.297" endtime="20230308 08:59:59.353"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.354" level="INFO">Typing text '[7, 1, 4, 5]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.354" endtime="20230308 08:59:59.409"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.410" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.409" endtime="20230308 08:59:59.443"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.444" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.444" endtime="20230308 08:59:59.487"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.488" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.487" endtime="20230308 08:59:59.518"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 08:59:59.518" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 08:59:59.518" endtime="20230308 08:59:59.544"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 08:59:59.682" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-114.png"&gt;&lt;img src="selenium-screenshot-114.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 08:59:59.682" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 08:59:59.545" endtime="20230308 08:59:59.683"/>
+</kw>
+<status status="FAIL" starttime="20230308 08:59:59.544" endtime="20230308 08:59:59.683"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:01.687" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:01.684" endtime="20230308 09:00:01.688"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:01.684" endtime="20230308 09:00:01.688"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:59.544" endtime="20230308 09:00:01.688"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:58.899" endtime="20230308 09:00:01.688"/>
+</kw>
+<msg timestamp="20230308 09:00:01.688" level="INFO">Repeating keyword, round 7/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:01.689" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:01.689" endtime="20230308 09:00:01.778"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:01.779" level="INFO">${word} = seem</msg>
+<status status="PASS" starttime="20230308 09:00:01.778" endtime="20230308 09:00:01.779"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:01.779" level="INFO">${numbers} = [9, 3, 1, 8]</msg>
+<status status="PASS" starttime="20230308 09:00:01.779" endtime="20230308 09:00:01.779"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:01.779" endtime="20230308 09:00:01.806"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:01.807" level="INFO">Typing text 'seem' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:01.806" endtime="20230308 09:00:01.863"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:01.864" level="INFO">Typing text 'seem' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:01.863" endtime="20230308 09:00:01.920"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:01.920" level="INFO">Typing text 'seem' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:01.920" endtime="20230308 09:00:01.970"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:01.971" level="INFO">Typing text 'seem' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:01.970" endtime="20230308 09:00:02.019"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.020" level="INFO">Typing text '[9, 3, 1, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.020" endtime="20230308 09:00:02.078"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.078" level="INFO">Typing text '[9, 3, 1, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.078" endtime="20230308 09:00:02.135"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.135" level="INFO">Typing text '[9, 3, 1, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.135" endtime="20230308 09:00:02.193"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.193" level="INFO">Typing text '[9, 3, 1, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.193" endtime="20230308 09:00:02.255"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.256" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.255" endtime="20230308 09:00:02.287"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.288" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.288" endtime="20230308 09:00:02.327"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.328" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.327" endtime="20230308 09:00:02.355"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:02.356" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:02.356" endtime="20230308 09:00:02.387"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:02.529" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-115.png"&gt;&lt;img src="selenium-screenshot-115.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:02.530" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:02.388" endtime="20230308 09:00:02.530"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:02.388" endtime="20230308 09:00:02.531"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:04.540" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.537" endtime="20230308 09:00:04.540"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:04.537" endtime="20230308 09:00:04.540"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:02.387" endtime="20230308 09:00:04.540"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:01.688" endtime="20230308 09:00:04.540"/>
+</kw>
+<msg timestamp="20230308 09:00:04.541" level="INFO">Repeating keyword, round 8/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:04.541" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:04.541" endtime="20230308 09:00:04.618"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:04.618" level="INFO">${word} = public</msg>
+<status status="PASS" starttime="20230308 09:00:04.618" endtime="20230308 09:00:04.618"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:04.619" level="INFO">${numbers} = [3, 8, 4, 2]</msg>
+<status status="PASS" starttime="20230308 09:00:04.618" endtime="20230308 09:00:04.619"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:04.619" endtime="20230308 09:00:04.636"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:04.636" level="INFO">Typing text 'public' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.636" endtime="20230308 09:00:04.689"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:04.690" level="INFO">Typing text 'public' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.690" endtime="20230308 09:00:04.743"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:04.744" level="INFO">Typing text 'public' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.744" endtime="20230308 09:00:04.799"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:04.800" level="INFO">Typing text 'public' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.799" endtime="20230308 09:00:04.854"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:04.855" level="INFO">Typing text '[3, 8, 4, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.855" endtime="20230308 09:00:04.910"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:04.911" level="INFO">Typing text '[3, 8, 4, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.911" endtime="20230308 09:00:04.975"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:04.976" level="INFO">Typing text '[3, 8, 4, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:04.975" endtime="20230308 09:00:05.029"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:05.030" level="INFO">Typing text '[3, 8, 4, 2]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:05.030" endtime="20230308 09:00:05.084"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:05.085" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:05.085" endtime="20230308 09:00:05.116"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:05.117" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:05.117" endtime="20230308 09:00:05.155"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:05.156" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:05.155" endtime="20230308 09:00:05.184"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:05.185" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:05.184" endtime="20230308 09:00:05.208"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:05.345" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-116.png"&gt;&lt;img src="selenium-screenshot-116.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:05.346" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:05.209" endtime="20230308 09:00:05.346"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:05.209" endtime="20230308 09:00:05.347"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:07.350" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.347" endtime="20230308 09:00:07.350"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:07.347" endtime="20230308 09:00:07.351"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:05.209" endtime="20230308 09:00:07.351"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:04.541" endtime="20230308 09:00:07.351"/>
+</kw>
+<msg timestamp="20230308 09:00:07.351" level="INFO">Repeating keyword, round 9/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:07.352" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:07.351" endtime="20230308 09:00:07.436"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:07.437" level="INFO">${word} = society</msg>
+<status status="PASS" starttime="20230308 09:00:07.436" endtime="20230308 09:00:07.437"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:07.437" level="INFO">${numbers} = [9, 4, 7, 3]</msg>
+<status status="PASS" starttime="20230308 09:00:07.437" endtime="20230308 09:00:07.437"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:07.438" endtime="20230308 09:00:07.454"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.454" level="INFO">Typing text 'society' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.454" endtime="20230308 09:00:07.509"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.509" level="INFO">Typing text 'society' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.509" endtime="20230308 09:00:07.562"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.563" level="INFO">Typing text 'society' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.562" endtime="20230308 09:00:07.620"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.620" level="INFO">Typing text 'society' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.620" endtime="20230308 09:00:07.674"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.674" level="INFO">Typing text '[9, 4, 7, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.674" endtime="20230308 09:00:07.736"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.736" level="INFO">Typing text '[9, 4, 7, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.736" endtime="20230308 09:00:07.799"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.800" level="INFO">Typing text '[9, 4, 7, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.799" endtime="20230308 09:00:07.859"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.860" level="INFO">Typing text '[9, 4, 7, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.859" endtime="20230308 09:00:07.922"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.923" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.923" endtime="20230308 09:00:07.960"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:07.960" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:07.960" endtime="20230308 09:00:08.000"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:08.001" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:08.001" endtime="20230308 09:00:08.043"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:08.044" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:08.043" endtime="20230308 09:00:08.077"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:08.217" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-117.png"&gt;&lt;img src="selenium-screenshot-117.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:08.217" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:08.078" endtime="20230308 09:00:08.218"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:08.077" endtime="20230308 09:00:08.218"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:10.221" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.218" endtime="20230308 09:00:10.221"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:10.218" endtime="20230308 09:00:10.222"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:08.077" endtime="20230308 09:00:10.222"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:07.351" endtime="20230308 09:00:10.222"/>
+</kw>
+<msg timestamp="20230308 09:00:10.222" level="INFO">Repeating keyword, round 10/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:10.223" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:10.222" endtime="20230308 09:00:10.310"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:10.311" level="INFO">${word} = someone</msg>
+<status status="PASS" starttime="20230308 09:00:10.311" endtime="20230308 09:00:10.311"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:10.311" level="INFO">${numbers} = [6, 5, 7, 4]</msg>
+<status status="PASS" starttime="20230308 09:00:10.311" endtime="20230308 09:00:10.311"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:10.312" endtime="20230308 09:00:10.327"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.328" level="INFO">Typing text 'someone' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.327" endtime="20230308 09:00:10.380"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.381" level="INFO">Typing text 'someone' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.381" endtime="20230308 09:00:10.436"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.437" level="INFO">Typing text 'someone' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.437" endtime="20230308 09:00:10.490"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.491" level="INFO">Typing text 'someone' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.491" endtime="20230308 09:00:10.545"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.546" level="INFO">Typing text '[6, 5, 7, 4]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.545" endtime="20230308 09:00:10.613"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.614" level="INFO">Typing text '[6, 5, 7, 4]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.614" endtime="20230308 09:00:10.671"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.672" level="INFO">Typing text '[6, 5, 7, 4]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.672" endtime="20230308 09:00:10.730"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.731" level="INFO">Typing text '[6, 5, 7, 4]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.730" endtime="20230308 09:00:10.784"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.785" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.785" endtime="20230308 09:00:10.820"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.820" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.820" endtime="20230308 09:00:10.859"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.859" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.859" endtime="20230308 09:00:10.891"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:10.892" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:10.891" endtime="20230308 09:00:10.919"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:11.063" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-118.png"&gt;&lt;img src="selenium-screenshot-118.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:11.064" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:10.920" endtime="20230308 09:00:11.064"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:10.919" endtime="20230308 09:00:11.065"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:13.074" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.071" endtime="20230308 09:00:13.074"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:13.071" endtime="20230308 09:00:13.074"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:10.919" endtime="20230308 09:00:13.075"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:10.222" endtime="20230308 09:00:13.075"/>
+</kw>
+<msg timestamp="20230308 09:00:13.075" level="INFO">Repeating keyword, round 11/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:13.076" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:13.075" endtime="20230308 09:00:13.159"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:13.160" level="INFO">${word} = help</msg>
+<status status="PASS" starttime="20230308 09:00:13.159" endtime="20230308 09:00:13.160"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:13.160" level="INFO">${numbers} = [6, 2, 4, 3]</msg>
+<status status="PASS" starttime="20230308 09:00:13.160" endtime="20230308 09:00:13.160"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:13.160" endtime="20230308 09:00:13.184"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.185" level="INFO">Typing text 'help' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.184" endtime="20230308 09:00:13.238"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.238" level="INFO">Typing text 'help' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.238" endtime="20230308 09:00:13.287"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.288" level="INFO">Typing text 'help' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.287" endtime="20230308 09:00:13.337"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.337" level="INFO">Typing text 'help' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.337" endtime="20230308 09:00:13.386"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.386" level="INFO">Typing text '[6, 2, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.386" endtime="20230308 09:00:13.441"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.442" level="INFO">Typing text '[6, 2, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.441" endtime="20230308 09:00:13.495"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.496" level="INFO">Typing text '[6, 2, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.496" endtime="20230308 09:00:13.551"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.551" level="INFO">Typing text '[6, 2, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.551" endtime="20230308 09:00:13.604"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.605" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.604" endtime="20230308 09:00:13.637"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.638" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.637" endtime="20230308 09:00:13.677"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.677" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.677" endtime="20230308 09:00:13.707"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:13.707" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:13.707" endtime="20230308 09:00:13.733"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:13.880" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-119.png"&gt;&lt;img src="selenium-screenshot-119.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:13.881" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:13.734" endtime="20230308 09:00:13.881"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:13.733" endtime="20230308 09:00:13.882"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:15.885" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:15.882" endtime="20230308 09:00:15.885"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:15.882" endtime="20230308 09:00:15.885"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:13.733" endtime="20230308 09:00:15.885"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:13.075" endtime="20230308 09:00:15.886"/>
+</kw>
+<msg timestamp="20230308 09:00:15.886" level="INFO">Repeating keyword, round 12/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:15.886" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:15.886" endtime="20230308 09:00:15.976"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:15.977" level="INFO">${word} = total</msg>
+<status status="PASS" starttime="20230308 09:00:15.976" endtime="20230308 09:00:15.977"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:15.977" level="INFO">${numbers} = [8, 5, 4, 3]</msg>
+<status status="PASS" starttime="20230308 09:00:15.977" endtime="20230308 09:00:15.977"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:15.977" endtime="20230308 09:00:15.992"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:15.992" level="INFO">Typing text 'total' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:15.992" endtime="20230308 09:00:16.045"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.046" level="INFO">Typing text 'total' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.046" endtime="20230308 09:00:16.102"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.102" level="INFO">Typing text 'total' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.102" endtime="20230308 09:00:16.172"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.172" level="INFO">Typing text 'total' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.172" endtime="20230308 09:00:16.261"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.262" level="INFO">Typing text '[8, 5, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.261" endtime="20230308 09:00:16.328"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.329" level="INFO">Typing text '[8, 5, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.329" endtime="20230308 09:00:16.410"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.411" level="INFO">Typing text '[8, 5, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.410" endtime="20230308 09:00:16.484"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.485" level="INFO">Typing text '[8, 5, 4, 3]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.485" endtime="20230308 09:00:16.550"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.551" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.551" endtime="20230308 09:00:16.590"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.591" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.591" endtime="20230308 09:00:16.642"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.643" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.642" endtime="20230308 09:00:16.680"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:16.681" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:16.680" endtime="20230308 09:00:16.711"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:16.863" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-120.png"&gt;&lt;img src="selenium-screenshot-120.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:16.864" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:16.712" endtime="20230308 09:00:16.864"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:16.712" endtime="20230308 09:00:16.865"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:18.883" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:18.879" endtime="20230308 09:00:18.883"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:18.879" endtime="20230308 09:00:18.883"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:16.712" endtime="20230308 09:00:18.883"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:15.886" endtime="20230308 09:00:18.884"/>
+</kw>
+<msg timestamp="20230308 09:00:18.884" level="INFO">Repeating keyword, round 13/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:18.884" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:18.884" endtime="20230308 09:00:18.984"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:18.985" level="INFO">${word} = sea</msg>
+<status status="PASS" starttime="20230308 09:00:18.985" endtime="20230308 09:00:18.985"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:18.986" level="INFO">${numbers} = [9, 8, 5, 1]</msg>
+<status status="PASS" starttime="20230308 09:00:18.985" endtime="20230308 09:00:18.986"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:18.986" endtime="20230308 09:00:19.003"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.003" level="INFO">Typing text 'sea' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.003" endtime="20230308 09:00:19.062"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.063" level="INFO">Typing text 'sea' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.062" endtime="20230308 09:00:19.119"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.120" level="INFO">Typing text 'sea' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.119" endtime="20230308 09:00:19.175"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.176" level="INFO">Typing text 'sea' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.176" endtime="20230308 09:00:19.237"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.238" level="INFO">Typing text '[9, 8, 5, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.237" endtime="20230308 09:00:19.301"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.301" level="INFO">Typing text '[9, 8, 5, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.301" endtime="20230308 09:00:19.355"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.356" level="INFO">Typing text '[9, 8, 5, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.356" endtime="20230308 09:00:19.417"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.418" level="INFO">Typing text '[9, 8, 5, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.418" endtime="20230308 09:00:19.484"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.484" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.484" endtime="20230308 09:00:19.525"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.526" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.526" endtime="20230308 09:00:19.568"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.569" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.569" endtime="20230308 09:00:19.619"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:19.620" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:19.619" endtime="20230308 09:00:19.645"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:19.788" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-121.png"&gt;&lt;img src="selenium-screenshot-121.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:19.788" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:19.646" endtime="20230308 09:00:19.789"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:19.645" endtime="20230308 09:00:19.790"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:21.802" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:21.799" endtime="20230308 09:00:21.803"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:21.799" endtime="20230308 09:00:21.803"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:19.645" endtime="20230308 09:00:21.803"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:18.884" endtime="20230308 09:00:21.803"/>
+</kw>
+<msg timestamp="20230308 09:00:21.803" level="INFO">Repeating keyword, round 14/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:21.804" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:21.804" endtime="20230308 09:00:21.886"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:21.887" level="INFO">${word} = he</msg>
+<status status="PASS" starttime="20230308 09:00:21.887" endtime="20230308 09:00:21.887"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:21.888" level="INFO">${numbers} = [9, 8, 4, 1]</msg>
+<status status="PASS" starttime="20230308 09:00:21.887" endtime="20230308 09:00:21.888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:21.888" endtime="20230308 09:00:21.901"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:21.902" level="INFO">Typing text 'he' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:21.902" endtime="20230308 09:00:21.952"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:21.953" level="INFO">Typing text 'he' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:21.953" endtime="20230308 09:00:22.005"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.005" level="INFO">Typing text 'he' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.005" endtime="20230308 09:00:22.055"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.056" level="INFO">Typing text 'he' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.056" endtime="20230308 09:00:22.106"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.107" level="INFO">Typing text '[9, 8, 4, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.106" endtime="20230308 09:00:22.160"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.161" level="INFO">Typing text '[9, 8, 4, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.160" endtime="20230308 09:00:22.218"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.218" level="INFO">Typing text '[9, 8, 4, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.218" endtime="20230308 09:00:22.273"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.274" level="INFO">Typing text '[9, 8, 4, 1]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.274" endtime="20230308 09:00:22.328"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.329" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.329" endtime="20230308 09:00:22.360"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.361" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.360" endtime="20230308 09:00:22.399"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.400" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.399" endtime="20230308 09:00:22.430"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:22.430" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:22.430" endtime="20230308 09:00:22.456"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:22.601" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-122.png"&gt;&lt;img src="selenium-screenshot-122.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:22.602" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:22.457" endtime="20230308 09:00:22.602"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:22.457" endtime="20230308 09:00:22.602"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:24.615" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:24.611" endtime="20230308 09:00:24.615"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:24.610" endtime="20230308 09:00:24.615"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:22.457" endtime="20230308 09:00:24.615"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:21.804" endtime="20230308 09:00:24.615"/>
+</kw>
+<msg timestamp="20230308 09:00:24.615" level="INFO">Repeating keyword, round 15/15.</msg>
+<kw name="Registrar respostas do formulario 88" library="responderFormulario92-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230308 09:00:24.616" level="INFO">Opening url 'https://dev-portalpermissionario.curitiba.pr.gov.br/pesquisa/responder/92'</msg>
+<status status="PASS" starttime="20230308 09:00:24.616" endtime="20230308 09:00:24.687"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230308 09:00:24.688" level="INFO">${word} = shoulder</msg>
+<status status="PASS" starttime="20230308 09:00:24.688" endtime="20230308 09:00:24.688"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${numbers}</var>
+<arg>random.sample(range(1, 10), 4)</arg>
+<arg>random</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20230308 09:00:24.688" level="INFO">${numbers} = [9, 1, 7, 8]</msg>
+<status status="PASS" starttime="20230308 09:00:24.688" endtime="20230308 09:00:24.688"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230308 09:00:24.689" endtime="20230308 09:00:24.710"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_1}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:24.711" level="INFO">Typing text 'shoulder' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[1]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:24.711" endtime="20230308 09:00:24.765"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_2}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:24.765" level="INFO">Typing text 'shoulder' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[2]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:24.765" endtime="20230308 09:00:24.816"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_3}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:24.816" level="INFO">Typing text 'shoulder' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[3]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:24.816" endtime="20230308 09:00:24.867"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${PERGUNTA_4}</arg>
+<arg>${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:24.867" level="INFO">Typing text 'shoulder' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[10]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:24.867" endtime="20230308 09:00:24.919"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_1}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:24.920" level="INFO">Typing text '[9, 1, 7, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[4]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:24.920" endtime="20230308 09:00:24.975"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_2}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:24.976" level="INFO">Typing text '[9, 1, 7, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[5]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:24.975" endtime="20230308 09:00:25.030"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_3}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:25.030" level="INFO">Typing text '[9, 1, 7, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[6]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:25.030" endtime="20230308 09:00:25.083"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${NUMERICO_4}</arg>
+<arg>${numbers}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:25.084" level="INFO">Typing text '[9, 1, 7, 8]' into text field 'xpath://*[@id="formResponderFormularioPesquisa"]/div[1]/div[2]/div[13]/input[2]'.</msg>
+<status status="PASS" starttime="20230308 09:00:25.083" endtime="20230308 09:00:25.134"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:25.135" level="INFO">Clicking element 'xpath://*[@id="radioSim_223"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:25.135" endtime="20230308 09:00:25.166"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_3}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:25.167" level="INFO">Clicking element 'xpath://*[@id="radioNaoAplica_221"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:25.166" endtime="20230308 09:00:25.202"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RADIO_4}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:25.203" level="INFO">Clicking element 'xpath://*[@id="radioNao_222"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:25.202" endtime="20230308 09:00:25.230"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENVIAR_FORMULARIO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230308 09:00:25.231" level="INFO">Clicking element 'xpath://*[@id="btnEnviarFormularioPesquisa"]'.</msg>
+<status status="PASS" starttime="20230308 09:00:25.230" endtime="20230308 09:00:25.255"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" library="BuiltIn">
+<arg>1</arg>
+<arg>2</arg>
+<arg>Aguardar carregamento da pagina</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:25.395" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-123.png"&gt;&lt;img src="selenium-screenshot-123.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230308 09:00:25.395" level="FAIL">Title should have been 'Minhas Guias - Sabores e Saberes' but was '- Sabores e Saberes'.</msg>
+<status status="FAIL" starttime="20230308 09:00:25.256" endtime="20230308 09:00:25.396"/>
+</kw>
+<status status="FAIL" starttime="20230308 09:00:25.255" endtime="20230308 09:00:25.396"/>
+</kw>
+<kw name="Aguardar carregamento da pagina" library="responderFormulario92-page-object">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Minhas Guias - Sabores e Saberes</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230308 09:00:27.408" level="INFO">Page title is 'Minhas Guias - Sabores e Saberes'.</msg>
+<status status="PASS" starttime="20230308 09:00:27.405" endtime="20230308 09:00:27.408"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:27.404" endtime="20230308 09:00:27.408"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:25.255" endtime="20230308 09:00:27.408"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:24.616" endtime="20230308 09:00:27.408"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:44.583" endtime="20230308 09:00:27.408"/>
+</kw>
+<kw name="Fechar Navegador" library="responderFormulario92-page-object">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230308 09:00:27.409" endtime="20230308 09:00:29.554"/>
+</kw>
+<status status="PASS" starttime="20230308 09:00:27.409" endtime="20230308 09:00:29.554"/>
+</kw>
+<status status="PASS" starttime="20230308 08:59:39.871" endtime="20230308 09:00:29.555"/>
+</test>
+<status status="PASS" starttime="20230308 08:59:39.269" endtime="20230308 09:00:29.556"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Responderformulario92">Responderformulario92</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

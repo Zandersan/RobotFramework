@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20230123 16:21:28.525" rpa="false" schemaversion="3">
+<suite id="s1" name="gerenciadorBanner" source="D:\Testes\Automatizados\Portal PMC\Gerenciador\tests\gerenciadorBanner.robot">
+<test id="s1-t1" name="Validação de regras de consulta, cadastro e edição de Banner" line="5">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230123 16:21:29.103" endtime="20230123 16:21:29.103"/>
+</kw>
+<kw name="Fazer login no Gerenciador PMC" library="gerenciadorBanner-page-object">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/inicio/login</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230123 16:21:29.104" level="INFO">Opening browser 'Chrome' to base url 'https://dev-gerenciador.curitiba.pr.gov.br/inicio/login'.</msg>
+<status status="PASS" starttime="20230123 16:21:29.104" endtime="20230123 16:21:30.476"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230123 16:21:30.476" endtime="20230123 16:21:30.714"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Login - Portal PMC</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20230123 16:21:30.825" level="INFO">Page title is 'Login - Portal PMC'.</msg>
+<status status="PASS" starttime="20230123 16:21:30.714" endtime="20230123 16:21:30.825"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_USUARIO}</arg>
+<arg>alexrocha</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:30.826" level="INFO">Typing text 'alexrocha' into text field 'id=Usuario'.</msg>
+<status status="PASS" starttime="20230123 16:21:30.825" endtime="20230123 16:21:31.190"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${INPUT_SENHA}</arg>
+<arg>\#.senhasenha</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:31.190" level="INFO">Typing password into text field 'id=Senha'.</msg>
+<msg timestamp="20230123 16:21:31.440" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230123 16:21:31.584" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230123 16:21:31.190" endtime="20230123 16:21:31.584"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:31.584" level="INFO">Clicking element 'id=loginEntrar'.</msg>
+<status status="PASS" starttime="20230123 16:21:31.584" endtime="20230123 16:21:33.383"/>
+</kw>
+<status status="PASS" starttime="20230123 16:21:29.103" endtime="20230123 16:21:33.383"/>
+</kw>
+<kw name="Verificação de regras do Cadastro de Banner com o tipo WebSite_Programas" library="gerenciadorBanner-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/Banner/Inserir</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230123 16:21:33.384" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/Banner/Inserir'</msg>
+<status status="PASS" starttime="20230123 16:21:33.384" endtime="20230123 16:21:34.843"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230123 16:21:34.843" level="INFO">${word} = military</msg>
+<status status="PASS" starttime="20230123 16:21:34.843" endtime="20230123 16:21:34.843"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:34.843" level="INFO">Clicking element 'class:btn-primario'.</msg>
+<status status="PASS" starttime="20230123 16:21:34.843" endtime="20230123 16:21:35.127"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_OBRIGATORIO}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:21:35.127" endtime="20230123 16:21:35.410"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${ELEMENT_NOME_OBRIGATORIO}</arg>
+<arg>Campo nome obrigatório.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230123 16:21:35.410" level="INFO">Verifying element 'xpath://*[@id="BPO_STR_NOME-error"]' contains exact text 'Campo nome obrigatório.'.</msg>
+<status status="PASS" starttime="20230123 16:21:35.410" endtime="20230123 16:21:35.632"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${ELEMENT_TEMA_OBRIGATORIO}</arg>
+<arg>Campo tema obrigatório.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230123 16:21:35.632" level="INFO">Verifying element 'xpath://*[@id="SIS_INT_IDF-error"]' contains exact text 'Campo tema obrigatório.'.</msg>
+<status status="PASS" starttime="20230123 16:21:35.632" endtime="20230123 16:21:35.856"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${ELEMENT_TIPO_OBRIGATORIO}</arg>
+<arg>Campo tipo de banner obrigatório.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230123 16:21:35.856" level="INFO">Verifying element 'xpath://*[@id="TBP_INT_IDF-error"]' contains exact text 'Campo tipo de banner obrigatório.'.</msg>
+<status status="PASS" starttime="20230123 16:21:35.856" endtime="20230123 16:21:36.079"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CADASTRO}</arg>
+<arg>Teste ${word}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:36.079" level="INFO">Typing text 'Teste military' into text field 'id=BPO_STR_NOME'.</msg>
+<status status="PASS" starttime="20230123 16:21:36.079" endtime="20230123 16:21:36.478"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_URL_CADASTRO}</arg>
+<arg>http://${word}.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:36.478" level="INFO">Typing text 'http://military.com' into text field 'id=BPO_STR_URL'.</msg>
+<status status="PASS" starttime="20230123 16:21:36.478" endtime="20230123 16:21:36.853"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_DATA_INICIO_CADASTRO}</arg>
+<arg>21/01/2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:36.853" level="INFO">Typing text '21/01/2022' into text field 'id=BPO_DTM_INICIO'.</msg>
+<status status="PASS" starttime="20230123 16:21:36.853" endtime="20230123 16:21:37.285"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_DATA_TERMINO_CADASTRO}</arg>
+<arg>21/12/2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:37.286" level="INFO">Typing text '21/12/2022' into text field 'id=BPO_DTM_TERMINO'.</msg>
+<status status="PASS" starttime="20230123 16:21:37.285" endtime="20230123 16:21:37.713"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${LIST_TEMA_CADASTRO}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230123 16:21:37.713" endtime="20230123 16:21:38.049"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_TEMA_CADASTRO}</arg>
+<arg>Cultura</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:38.049" level="INFO">Selecting options from selection list 'xpath://*[@id="SIS_INT_IDF"]' by label Cultura.</msg>
+<status status="PASS" starttime="20230123 16:21:38.049" endtime="20230123 16:21:38.860"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_TIPO_CADASTRO}</arg>
+<arg>WebSite_Programas</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:38.860" level="INFO">Selecting options from selection list 'xpath://*[@id="TBP_INT_IDF"]' by label WebSite_Programas.</msg>
+<status status="PASS" starttime="20230123 16:21:38.860" endtime="20230123 16:21:39.654"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_DESKTOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:21:39.654" endtime="20230123 16:21:39.892"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${CHOOSE_DESKTOP}</arg>
+<arg>D:\\Testes\\Portal PMC\\Imagens\\Desktop Programas.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230123 16:21:39.892" level="INFO">Sending D:\Testes\Portal PMC\Imagens\Desktop Programas.jpg to browser.</msg>
+<status status="PASS" starttime="20230123 16:21:39.892" endtime="20230123 16:21:40.147"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_CONFIRMACAO_DESKTOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:21:40.147" endtime="20230123 16:21:40.371"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${CHOOSE_MOBILE}</arg>
+<arg>D:\\Testes\\Portal PMC\\Imagens\\Mobile Programas.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230123 16:21:40.372" level="INFO">Sending D:\Testes\Portal PMC\Imagens\Mobile Programas.jpg to browser.</msg>
+<status status="PASS" starttime="20230123 16:21:40.371" endtime="20230123 16:21:40.606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_CONFIRMACAO_MOBILE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:21:40.606" endtime="20230123 16:21:40.827"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:40.827" level="INFO">Clicking element 'class:btn-primario'.</msg>
+<status status="PASS" starttime="20230123 16:21:40.827" endtime="20230123 16:21:42.185"/>
+</kw>
+<status status="PASS" starttime="20230123 16:21:33.383" endtime="20230123 16:21:42.185"/>
+</kw>
+<kw name="Verificação de regras do Cadastro de Banner com o tipo WebSite_Central" library="gerenciadorBanner-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/Banner/Inserir</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230123 16:21:42.187" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/Banner/Inserir'</msg>
+<status status="PASS" starttime="20230123 16:21:42.186" endtime="20230123 16:21:42.439"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word2}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230123 16:21:42.439" level="INFO">${word2} = produce</msg>
+<status status="PASS" starttime="20230123 16:21:42.439" endtime="20230123 16:21:42.439"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:42.440" level="INFO">Clicking element 'class:btn-primario'.</msg>
+<status status="PASS" starttime="20230123 16:21:42.440" endtime="20230123 16:21:42.708"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CADASTRO}</arg>
+<arg>Teste ${word2}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:42.708" level="INFO">Typing text 'Teste produce' into text field 'id=BPO_STR_NOME'.</msg>
+<status status="PASS" starttime="20230123 16:21:42.708" endtime="20230123 16:21:43.087"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_URL_CADASTRO}</arg>
+<arg>http://${word2}.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:43.087" level="INFO">Typing text 'http://produce.com' into text field 'id=BPO_STR_URL'.</msg>
+<status status="PASS" starttime="20230123 16:21:43.087" endtime="20230123 16:21:43.488"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_DATA_INICIO_CADASTRO}</arg>
+<arg>21/01/2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:43.488" level="INFO">Typing text '21/01/2022' into text field 'id=BPO_DTM_INICIO'.</msg>
+<status status="PASS" starttime="20230123 16:21:43.488" endtime="20230123 16:21:43.916"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_DATA_TERMINO_CADASTRO}</arg>
+<arg>21/12/2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:43.916" level="INFO">Typing text '21/12/2022' into text field 'id=BPO_DTM_TERMINO'.</msg>
+<status status="PASS" starttime="20230123 16:21:43.916" endtime="20230123 16:21:44.341"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_TEMA_CADASTRO}</arg>
+<arg>Prefeitura</arg>
+<arg>Servidor</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:44.341" level="INFO">Selecting options from selection list 'xpath://*[@id="SIS_INT_IDF"]' by labels Prefeitura, Servidor.</msg>
+<status status="PASS" starttime="20230123 16:21:44.341" endtime="20230123 16:21:45.480"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_TIPO_CADASTRO}</arg>
+<arg>WebSite_Central</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:45.480" level="INFO">Selecting options from selection list 'xpath://*[@id="TBP_INT_IDF"]' by label WebSite_Central.</msg>
+<status status="PASS" starttime="20230123 16:21:45.480" endtime="20230123 16:21:46.273"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_DESKTOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:21:46.273" endtime="20230123 16:21:46.496"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${CHOOSE_DESKTOP}</arg>
+<arg>D:\\Testes\\Portal PMC\\Imagens\\Desktop Central.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230123 16:21:46.496" level="INFO">Sending D:\Testes\Portal PMC\Imagens\Desktop Central.jpg to browser.</msg>
+<status status="PASS" starttime="20230123 16:21:46.496" endtime="20230123 16:21:46.735"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_CONFIRMACAO_DESKTOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:21:46.735" endtime="20230123 16:21:46.956"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${CHOOSE_MOBILE}</arg>
+<arg>D:\\Testes\\Portal PMC\\Imagens\\Mobile Central.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230123 16:21:46.956" level="INFO">Sending D:\Testes\Portal PMC\Imagens\Mobile Central.jpg to browser.</msg>
+<status status="PASS" starttime="20230123 16:21:46.956" endtime="20230123 16:21:47.192"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_CONFIRMACAO_MOBILE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:21:47.192" endtime="20230123 16:21:47.416"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:47.417" level="INFO">Clicking element 'class:btn-primario'.</msg>
+<status status="PASS" starttime="20230123 16:21:47.416" endtime="20230123 16:21:48.016"/>
+</kw>
+<status status="PASS" starttime="20230123 16:21:42.186" endtime="20230123 16:21:48.016"/>
+</kw>
+<kw name="Verificação de regras do Consulta de Banner" library="gerenciadorBanner-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/Banner/Listar</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230123 16:21:48.017" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/Banner/Listar'</msg>
+<status status="PASS" starttime="20230123 16:21:48.017" endtime="20230123 16:21:48.288"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CONSULTA}</arg>
+<arg>Teste</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:48.289" level="INFO">Typing text 'Teste' into text field 'id=Nome'.</msg>
+<status status="PASS" starttime="20230123 16:21:48.288" endtime="20230123 16:21:48.669"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_TIPO_CONSULTA}</arg>
+<arg>WebSite_Programas</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:48.670" level="INFO">Selecting options from selection list 'xpath://*[@id="TipoBanner"]' by label WebSite_Programas.</msg>
+<status status="PASS" starttime="20230123 16:21:48.669" endtime="20230123 16:21:49.478"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_PUBLICADO_CONSULTA}</arg>
+<arg>Sim</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:49.478" level="INFO">Selecting options from selection list 'xpath://*[@id="Publicado"]' by label Sim.</msg>
+<status status="PASS" starttime="20230123 16:21:49.478" endtime="20230123 16:21:50.274"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_TEMA_CONSULTA}</arg>
+<arg>Cultura</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:50.274" level="INFO">Selecting options from selection list 'xpath://*[@id="Tema"]' by label Cultura.</msg>
+<status status="PASS" starttime="20230123 16:21:50.274" endtime="20230123 16:21:51.065"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CONSULTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:51.065" level="INFO">Clicking element 'xpath://*[@id="btnFiltrar"]'.</msg>
+<status status="PASS" starttime="20230123 16:21:51.065" endtime="20230123 16:21:51.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230123 16:21:56.513" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230123 16:21:51.508" endtime="20230123 16:21:56.513"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ELEMENT_NOME_CONSULTA}</arg>
+<arg>Teste</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230123 16:21:56.751" level="INFO">Element 'xpath://*[@id="divFiltro"]/div/div/div/table/tbody/tr[1]/td[3]' contains text 'Teste'.</msg>
+<status status="PASS" starttime="20230123 16:21:56.513" endtime="20230123 16:21:56.751"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ELEMENT_TIPO_CONSULTA}</arg>
+<arg>Website - Programas</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230123 16:21:56.975" level="INFO">Element 'xpath://*[@id="divFiltro"]/div/div/div/table/tbody/tr[1]/td[4]' contains text 'Website - Programas'.</msg>
+<status status="PASS" starttime="20230123 16:21:56.751" endtime="20230123 16:21:56.975"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${ELEMENT_TEMA_CONSULTA}</arg>
+<arg>Cultura</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20230123 16:21:57.210" level="INFO">Element 'xpath://*[@id="divFiltro"]/div/div/div/table/tbody/tr[1]/td[5]' contains text 'Cultura'.</msg>
+<status status="PASS" starttime="20230123 16:21:56.975" endtime="20230123 16:21:57.210"/>
+</kw>
+<status status="PASS" starttime="20230123 16:21:48.017" endtime="20230123 16:21:57.210"/>
+</kw>
+<kw name="Verificação de regras do Edição de Banner" library="gerenciadorBanner-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/Banner/Listar</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230123 16:21:57.211" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/Banner/Listar'</msg>
+<status status="PASS" starttime="20230123 16:21:57.211" endtime="20230123 16:21:57.510"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_EDICAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:57.510" level="INFO">Clicking element 'xpath://*[@id="divFiltro"]/div/div/div/table/tbody/tr[1]/td[7]/a'.</msg>
+<status status="PASS" starttime="20230123 16:21:57.510" endtime="20230123 16:21:58.302"/>
+</kw>
+<kw name="Word" library="FakerLibrary">
+<var>${word3}</var>
+<doc>Generate a word.</doc>
+<msg timestamp="20230123 16:21:58.303" level="INFO">${word3} = size</msg>
+<status status="PASS" starttime="20230123 16:21:58.302" endtime="20230123 16:21:58.303"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_NOME_CADASTRO}</arg>
+<arg>Teste ${word3}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:58.303" level="INFO">Typing text 'Teste size' into text field 'id=BPO_STR_NOME'.</msg>
+<status status="PASS" starttime="20230123 16:21:58.303" endtime="20230123 16:21:58.684"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_URL_CADASTRO}</arg>
+<arg>http://${word3}.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:58.685" level="INFO">Typing text 'http://size.com' into text field 'id=BPO_STR_URL'.</msg>
+<status status="PASS" starttime="20230123 16:21:58.684" endtime="20230123 16:21:59.064"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_DATA_INICIO_EDICAO}</arg>
+<arg>11/03/2022</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:59.064" level="INFO">Typing text '11/03/2022' into text field 'xpath://*[@id="BPO_DTM_INICIOSTR"]'.</msg>
+<status status="PASS" starttime="20230123 16:21:59.064" endtime="20230123 16:21:59.492"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${INPUT_DATA_TERMINO_EDICAO}</arg>
+<arg>15/12/2024</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230123 16:21:59.492" level="INFO">Typing text '15/12/2024' into text field 'xpath://*[@id="BPO_DTM_TERMINOSTR"]'.</msg>
+<status status="PASS" starttime="20230123 16:21:59.492" endtime="20230123 16:21:59.905"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${LIST_TEMA_CADASTRO}</arg>
+<arg>COHAB</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230123 16:21:59.905" level="INFO">Selecting options from selection list 'xpath://*[@id="SIS_INT_IDF"]' by label COHAB.</msg>
+<status status="PASS" starttime="20230123 16:21:59.905" endtime="20230123 16:22:00.697"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${CHOOSE_DESKTOP}</arg>
+<arg>D:\\Testes\\Portal PMC\\Imagens\\Desktop Programas.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230123 16:22:00.698" level="INFO">Sending D:\Testes\Portal PMC\Imagens\Desktop Programas.jpg to browser.</msg>
+<status status="PASS" starttime="20230123 16:22:00.697" endtime="20230123 16:22:00.935"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_CONFIRMACAO_DESKTOP}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:22:00.935" endtime="20230123 16:22:01.173"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${CHOOSE_MOBILE}</arg>
+<arg>D:\\Testes\\Portal PMC\\Imagens\\Mobile Programas.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230123 16:22:01.173" level="INFO">Sending D:\Testes\Portal PMC\Imagens\Mobile Programas.jpg to browser.</msg>
+<status status="PASS" starttime="20230123 16:22:01.173" endtime="20230123 16:22:01.412"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAIT_CONFIRMACAO_MOBILE}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230123 16:22:01.412" endtime="20230123 16:22:01.633"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_CADASTRO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:22:01.633" level="INFO">Clicking element 'class:btn-primario'.</msg>
+<status status="PASS" starttime="20230123 16:22:01.633" endtime="20230123 16:22:02.184"/>
+</kw>
+<status status="PASS" starttime="20230123 16:21:57.210" endtime="20230123 16:22:02.184"/>
+</kw>
+<kw name="Verificação de regras da Exclusão de Banner" library="gerenciadorBanner-page-object">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://dev-gerenciador.curitiba.pr.gov.br/Banner/Listar</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230123 16:22:02.186" level="INFO">Opening url 'https://dev-gerenciador.curitiba.pr.gov.br/Banner/Listar'</msg>
+<status status="PASS" starttime="20230123 16:22:02.185" endtime="20230123 16:22:02.421"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_EDICAO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:22:02.421" level="INFO">Clicking element 'xpath://*[@id="divFiltro"]/div/div/div/table/tbody/tr[1]/td[7]/a'.</msg>
+<status status="PASS" starttime="20230123 16:22:02.421" endtime="20230123 16:22:02.804"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BUTTON_EXCLUIR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230123 16:22:02.804" level="INFO">Clicking element 'xpath://*[@id="formulario"]/div[4]/div/a[3]'.</msg>
+<status status="PASS" starttime="20230123 16:22:02.804" endtime="20230123 16:22:03.058"/>
+</kw>
+<status status="PASS" starttime="20230123 16:22:02.185" endtime="20230123 16:22:03.058"/>
+</kw>
+<kw name="Fechar Navegador" library="gerenciadorBanner-page-object">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230123 16:22:03.059" endtime="20230123 16:22:05.244"/>
+</kw>
+<status status="PASS" starttime="20230123 16:22:03.059" endtime="20230123 16:22:05.244"/>
+</kw>
+<status status="PASS" starttime="20230123 16:21:29.101" endtime="20230123 16:22:05.245"/>
+</test>
+<status status="PASS" starttime="20230123 16:21:28.527" endtime="20230123 16:22:05.246"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="gerenciadorBanner">gerenciadorBanner</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

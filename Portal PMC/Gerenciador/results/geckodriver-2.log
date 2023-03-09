@@ -1,0 +1,15 @@
+1674477437857	geckodriver	INFO	Listening on 127.0.0.1:51214
+1674477440939	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "51215" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\alero\\AppData\\Local\\Temp\\rust_mozprofile13QS3X"
+1674477441175	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+1674477441178	Marionette	INFO	Listening on port 51222
+WebDriver BiDi listening on ws://127.0.0.1:51215
+Read port: 51222
+1674477441369	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\alero\\AppData\\Local\\Temp\\rust_mozprofile13QS3X\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:51215/devtools/browser/ad172ae5-7974-4f97-a824-8da838792dca
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://dev-gerenciador.curitiba.pr.gov.br."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://dev-gerenciador.curitiba.pr.gov.br."
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 572: NotFoundError: No such JSWindowActor 'DevToolsFrame'
+1674477707305	Marionette	INFO	Stopped listening on port 51222
+Dynamically enable window occlusion 1
